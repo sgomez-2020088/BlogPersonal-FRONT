@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { CardPosts } from './CardPosts'
 import { useContextPosts } from '../../shared/hooks/useContextPosts'
 import { Modal } from './Modal'
@@ -11,19 +9,23 @@ export const Posts = () => {
 
   if (!posts) {
     return (
-      <div className="loading">
-        <SyncLoader color="#36d7b7" />
-        {/* O cualquier mensaje de carga */}
+      <div class="loading">
+        <SyncLoader
+          loading
+          margin={0}
+          size={20}
+        />
       </div>
     )
   }
 
   return (
-    <div className="row g-0 justify-content-center m-5">
-      <div className="mb-3 d-flex align-items-center justify-content-center">
+    <div class="row g-0 justify-content-center m-5">
+      <div class="mb-3 d-flex align-items-center justify-content-center">
         <h2>Mis publicaciones</h2>
       </div>
-      <div className="d-flex align-items-center justify-content-center">
+      <div class="d-flex align-items-center justify-content-center">
+      { /*
         <button
           className="mb-3 btn btn-primary"
           data-bs-toggle="modal"
@@ -31,10 +33,11 @@ export const Posts = () => {
         >
           Agregar post
         </button>
+        */}
       </div>
       <Modal />
 
-      {/* Condición para asegurarse de que posts sea un arreglo */}
+      {}
       {Array.isArray(posts) && posts.length > 0 ? (
         posts.map((post) => (
           <CardPosts
@@ -43,7 +46,7 @@ export const Posts = () => {
             course={post.course.name}
             description={post.description}
             link={post.link}
-            date={post.datePublication}
+            datePublication={post.datePublication}
           />
         ))
       ) : (
