@@ -1,0 +1,130 @@
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+
+  .modal {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    animation: fadeIn 0.3s ease;
+  }
+  
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .modal-title {
+    font-size: 1.5rem;
+  }
+  
+  .btn-close {
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+
+  .modal-body {
+    margin-top: 15px;
+  }
+  
+
+  .modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+
+  .btn {
+    padding: 8px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+  }
+  
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+/* Aseguramos que los contenedores de las publicaciones estén alineados y con margen entre ellos */
+.row {
+    display: flex;
+    gap: 15px; /* Espacio entre cada tarjeta de publicación */
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Contenedor de la tarjeta (Card) */
+  .card {
+    margin-bottom: 20px; /* Margen en la parte inferior de cada tarjeta */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Establece el tamaño de las tarjetas */
+    text-align: center;
+  }
+  
+  /* Botón "Open Modal" centrado y más pequeño */
+  .btn-primary {
+    display: block;
+    margin: 20px auto; /* Centra el botón */
+    padding: 8px 16px; /* Reduce el tamaño del botón */
+    font-size: 1rem; /* Ajusta el tamaño de la fuente */
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
