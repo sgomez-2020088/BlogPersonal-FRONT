@@ -1,25 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react';
+import './CardPosts.css' // Importamos el archivo de CSS
 
-export const Modal = ({onCreate}) => {
+export const Modal = ({ onCreate }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => setIsOpen(true);
+  const closeModal = () => setIsOpen(false);
+
   return (
     <>
-        <div className="modal fade" id="createPostModal" tabIndex="-1" aria-labelledby="createPostModalLabel" aria-hidden="true">
-        <div className="modal-dialog">
-        <div className="modal-content">
+      {}
+      <button onClick={openModal} className="btn btn-primary">
+        Open Modal
+      </button>
+
+      {}
+      {isOpen && (
+        <div className="modal-overlay">
+          <div className="modal">
             <div className="modal-header">
-            <h1 className="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-            <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h1 className="modal-title">Modal Title</h1>
+              <button className="btn-close" onClick={closeModal}>
+                ×
+              </button>
             </div>
             <div className="modal-body">
-            ...
+              <p>Content of the modal goes here...</p>
             </div>
             <div className="modal-footer">
-            <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" className="btn btn-primary">Save changes</button>
+              <button className="btn btn-secondary" onClick={closeModal}>
+                Close
+              </button>
+              <button className="btn btn-primary" onClick={onCreate}>
+                Save changes
+              </button>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
-  </>
-    )
-}
+      )}
+    </>
+  );
+};
