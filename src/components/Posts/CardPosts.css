@@ -1,130 +1,207 @@
 /* Modal Overlay */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
 
-  .modal {
-    background-color: white;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 500px;
-    width: 100%;
-    animation: fadeIn 0.3s ease;
-  }
-  
+.modal {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 600px; /* Aumentamos el tamaño máximo del modal */
+  width: 100%;
+  animation: fadeIn 0.3s ease;
+}
 
-  .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .modal-title {
-    font-size: 1.5rem;
-  }
-  
-  .btn-close {
-    font-size: 1.5rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-  }
-  
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  .modal-body {
-    margin-top: 15px;
-  }
-  
+.modal-title {
+  font-size: 1.5rem;
+}
 
-  .modal-footer {
-    display: flex;
-    justify-content: flex-end;
-    gap: 10px;
-    margin-top: 20px;
-  }
-  
+.btn-close {
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
 
-  .btn {
-    padding: 8px 15px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-    color: white;
-    border: none;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  .btn-secondary {
-    background-color: #6c757d;
-    color: white;
-    border: none;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #5a6268;
-  }
-  
+.modal-body {
+  margin-top: 15px;
+}
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 8px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Aseguramos que los contenedores de las publicaciones estén alineados y con margen entre ellos */
 .row {
-    display: flex;
-    gap: 15px; /* Espacio entre cada tarjeta de publicación */
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  /* Contenedor de la tarjeta (Card) */
-  .card {
-    margin-bottom: 20px; /* Margen en la parte inferior de cada tarjeta */
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 200px; /* Establece el tamaño de las tarjetas */
-    text-align: center;
-  }
-  
-  /* Botón "Open Modal" centrado y más pequeño */
-  .btn-primary {
-    display: block;
-    margin: 20px auto; /* Centra el botón */
-    padding: 8px 16px; /* Reduce el tamaño del botón */
-    font-size: 1rem; /* Ajusta el tamaño de la fuente */
-    cursor: pointer;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
+  display: grid; /* Usamos grid para distribuir las tarjetas */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Hacemos las tarjetas más responsivas */
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+
+.card {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; 
+  text-align: center;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.cardDescription {
+  font-size: 1rem;
+  color: #666;
+  margin: 10px 0;
+}
+
+.cardCourse {
+  font-size: 1rem;
+  color: #007bff;
+}
+
+.cardCourse:last-child {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.btn-primary {
+  display: block;
+  margin: 20px auto; /* Centra el botón */
+  padding: 8px 16px; /* Reduce el tamaño del botón */
+  font-size: 1rem; /* Ajusta el tamaño de la fuente */
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+/* Formulario para agregar comentarios */
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Línea gris debajo del contenido */
+
+
+
+.divider {
+  border: 0;
+  border-top: 0.2rem solid #020202;
+  width: 95%; /* Reduce el tamaño de la línea para que tenga menos espacio en los laterales */
+  margin: 10px auto; /* Asegura que la línea esté centrada y tenga margen automático a los lados */
+}
+
+/* Estilo para el botón de "Comentarios" */
+.btn-comments {
+  display: block;
+  width: calc(100% - 40px); /* Ajustamos el ancho para dejar espacio */
+  padding: 8px 16px; /* Añadimos más espacio en el interior del botón */
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #ee4266;
+  color: white;
+  border: none;
+  margin: 10px auto; /* Centramos el botón y añadimos margen en la parte superior e inferior */
+}
+
+.btn-comments:hover {
+  background-color: #2A1E5C;
+}
+
