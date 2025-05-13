@@ -30,10 +30,10 @@ export const getCommentsByPostId = async (postId) => {
     }
 }
 
-// Agregar un nuevo comentario
+
 export const addCommentRequest = async (postId, commentData) => {
     try {
-        return await apiClient.post(`/post/${postId}/comments`, commentData) 
+        return await apiClient.post(`/post/${postId}/comments`, commentData)
     } catch (err) {
         return {
             error: true,
