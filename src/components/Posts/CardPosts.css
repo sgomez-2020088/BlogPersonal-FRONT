@@ -182,10 +182,10 @@ button:hover {
 
 .divider {
   border: 0;
-  border-top: 0.2rem solid #020202;
-  width: 95%; /* Reduce el tamaño de la línea para que tenga menos espacio en los laterales */
-  margin: 10px auto; /* Asegura que la línea esté centrada y tenga margen automático a los lados */
+  border-top: 0.2rem solid #020202; /* Reduce el tamaño de la línea para que tenga menos espacio en los laterales */
+  margin: 10px 0; /* Asegura que la línea esté centrada y tenga margen automático a los lados */
 }
+
 
 /* Estilo para el botón de "Comentarios" */
 .btn-comments {
@@ -204,4 +204,3 @@ button:hover {
 .btn-comments:hover {
   background-color: #2A1E5C;
 }
-
