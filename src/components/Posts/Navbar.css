@@ -15,7 +15,7 @@
 
 .navbar button {
   padding: 10px 20px;
-  background-color: #016DD9;
+  background-color:#001925;
   color: white;
   border: none;
   border-radius: 5px;
@@ -24,7 +24,7 @@
 }
 
 .navbar button:hover {
-  background-color: #005bb5;
+  background-color: #001925;
 }
 
 /* Cambios específicos para los botones activos */
@@ -51,7 +51,7 @@
 }
 
 .filter-button.active {
-  background-color: #016DD9;
+  background-color:#001925;
   color: white;
 }
 
