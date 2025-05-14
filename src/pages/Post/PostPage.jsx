@@ -1,5 +1,5 @@
 
-import React, { useState } from "react"
+/*import React, { useState } from "react"
 import { Posts } from "../../components/Posts/Posts"
 import { PostProvider } from "../../contexts/PostsContext"
 import { Navbar } from "../../components/Posts/NavBar"
@@ -19,4 +19,23 @@ const [filter, setFilter] = useState("Todos")
             </PostProvider>
     </div>
     )
+}*/
+
+import React, { useState } from "react"
+import { Posts } from "../../components/Posts/Posts"
+import { PostProvider } from "../../contexts/PostsContext"
+import { Navbar } from "../../components/Posts/NavBar"
+
+export const PostPage = () => {
+  const [filter, setFilter] = useState("Todos") // Estado del filtro, manejado desde el Navbar
+
+  return (
+    <div>
+      <Navbar setFilter={setFilter} /> {/* Pasar setFilter al Navbar */}
+      <PostProvider>
+        <Posts filter={filter} /> {/* Pasar el filtro a los Posts */}
+      </PostProvider>
+    </div>
+  )
 }
+

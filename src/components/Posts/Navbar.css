@@ -31,11 +31,13 @@
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border-radius: 25px;
   }
   
   .navbar-button.active {
     background-color: #016DD9;
     color: white;
+    
   }
   
   .navbar-button:hover {
@@ -56,7 +58,7 @@
   .no-posts-message {
     font-size: 2rem; 
     text-align: center; 
-    color:#caf438; 
+    color:#fc3434; 
     margin-top: 20px; 
     font-weight: bold;
 }
@@ -83,3 +85,10 @@
     background-color: #005bb5;
   }
   
+  .no-posts {
+    font-size: 2rem; /* Aumenta el tamaño del texto */
+    text-align: center; /* Centra el texto */
+    color: #777; /* Puedes cambiar el color si lo deseas */
+    margin-top: 20px; /* Espacio superior para que no se quede pegado al borde */
+    font-weight: bold; /* Ponerlo en negritas si quieres */
+  }

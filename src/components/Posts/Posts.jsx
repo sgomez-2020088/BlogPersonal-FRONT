@@ -3,13 +3,15 @@ import React, { useState, useEffect } from 'react'
 import { useContextPosts } from '../../shared/hooks/useContextPosts'
 import { CardPosts } from './CardPosts'
 import { SyncLoader } from 'react-spinners'
-
 import './Navbar.css'
 
 export const Posts = ({ filter }) => {
   const { posts, isFetchingPosts } = useContextPosts()
 
-  const filteredPosts = filter === 'Todos' ? posts : posts.filter((post) => post.course === filter)
+
+  const filteredPosts = Array.isArray(posts) && posts.length > 0
+    ? (filter === 'Todos' ? posts : posts.filter(post => post.course === filter))
+    : []
 
   if (isFetchingPosts) {
     return (
@@ -27,10 +29,13 @@ export const Posts = ({ filter }) => {
 
       {Array.isArray(filteredPosts) && filteredPosts.length > 0 ? (
         filteredPosts.map((post) => (
-          <CardPosts key={post._id} post={post} /> 
+          <CardPosts key={post._id} post={post} />
         ))
       ) : (
-        <p>No hay publicaciones disponibles</p>
+        <div className='no-posts'>
+            <p>No hay publicaciones disponibles</p>
+        </div>
+        
       )}
     </div>
   );
