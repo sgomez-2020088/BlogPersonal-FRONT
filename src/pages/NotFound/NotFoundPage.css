@@ -6,7 +6,7 @@
     align-items: center;
     height: 100vh; /* Asegura que la página ocupe toda la altura de la ventana */
     background-color: #f8f8f8; /* Color de fondo suave */
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif
   }
   
   .not-found-container h1 {
@@ -37,6 +37,9 @@
   
   .not-found-button:hover {
     animation: shake3856 0.3s linear infinite both;
+    background-color: #001925;
+    color:  #caf438;
+    border: 4px solid  #caf438;
   }
   
   @keyframes shake3856 {

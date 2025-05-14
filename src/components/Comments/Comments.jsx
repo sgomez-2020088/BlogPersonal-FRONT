@@ -80,7 +80,7 @@ export const Comments = () => {
     }
 
     return (
-        <div className="comments-container">
+        <div className="comments-container2">
             <div className="regresar-btn-container">
                 <button onClick={handleGoBack} className="comments-go-back-btn">Regresar</button>
             </div>
@@ -107,14 +107,14 @@ export const Comments = () => {
                     <textarea
                         name="content"
                         className="comments-textarea"
-                        placeholder="Escribe tu comentario"
+                        placeholder="Agrega un comentario..."
                         value={newComment.content}
                         onChange={handleInputChange}
                     ></textarea>
                     {errors.content && <p className="error-message">{errors.content}</p>}
                     <div className="buttons-container">
                         <button type="button" onClick={handleCancelCommenting} className="comments-cancel-btn">Cancelar</button>
-                        <button type="submit" className="comments-submit-btn" disabled={!newComment.username || !newComment.content}>Comentar</button>
+                        <button type="submit" className="comments-submit-btn" disabled={!newComment.username || !newComment.content}>Publicar</button>
                     </div>
                 </form>
             )}
@@ -124,7 +124,7 @@ export const Comments = () => {
                     comments.map((comment) => (
                         <div key={comment._id} className="comment-item">
                             <div className="comment-header">
-                                <p className="comment-username">{comment.username}</p>
+                                <p className="comment-username">@{comment.username}</p>
                                 <p className="comment-content">{comment.content}</p>
                                 <p className="comment-date">Publicado: {new Date(comment.date).toLocaleDateString('es-ES', {
                                     day: 'numeric',

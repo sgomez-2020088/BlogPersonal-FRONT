@@ -7,6 +7,19 @@
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative; /* Importante para el posicionamiento absoluto */
+    
+}
+.comments-container2{
+    max-width: 50rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 35rem;
+    padding: 20px;
+    background-color:#212121;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    
 }
 
 /* Contenedor para el botón "Regresar" en la parte superior derecha */
@@ -14,28 +27,60 @@
     position: absolute;
     top: 10px;
     right: 20px;
+    
 }
 
 /* Estilo del botón regresar */
 .comments-go-back-btn {
-    background-color: #f44336; /* Rojo */
-    color: white;
+    font-family: 'Roboto', sans-serif;
+    background-color:#caf438;
+    color: rgb(0, 0, 0);
     padding: 8px 16px;
+    display: block;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.2px;
     cursor: pointer;
-    font-size: 14px;
+    border: none;
+    font-size: 1rem;
+    margin: 10px auto;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    background: #caf438;
+    border-radius: 0.3rem;
+    margin-bottom: 0.4rem;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%
+  );
+    
 }
 
 .comments-go-back-btn:hover {
-    background-color: #e53935; /* Rojo oscuro */
+    background-color: #001925;
+    color: rgb(255, 255, 255);
+    border: 1px solid #ff7a01;
 }
 
 /* Título de los comentarios */
 .comments-title {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     text-align: center;
+}
+
+.comments-title{
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-center: left; 
+    padding-left: 1rem;
+    font-weight: bold;
+    
 }
 
 /* Estilo del área para comenzar el comentario */
@@ -96,33 +141,70 @@
 .comment-item {
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #001925;
     padding: 15px;
     margin-bottom: 15px;
-    border-radius: 8px;
+    border-radius: 1rem;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%
+    );
+    clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 20px),
+    calc(100% - 20px) 100%,
+    0 100%
+    );
+    border-left: 10px solid #caf438;
 }
 
-/* Información del usuario */
+.comment-username{
+    font-size: 1rem;
+    color: #ffffff;
+    text-align: left; 
+    padding-left: 1rem;
+    font-weight: bold;
+}
+.comment-content{
+    font-size: 1rem;
+    color: #caf438;
+    margin: 10px 0;
+    text-align: left; 
+    padding-left: 1rem;
+    font-weight: bold;
+}
+.comment-date{
+    font-size: 1rem;
+    color: #cacaca;
+    text-align: left; 
+    padding-left: 1rem;
+    font-weight: bold;
+}
+
 .comment-header {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 10px;   
 }
 
 .comment-username {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .comment-date {
-    font-size: 12px;
-    color: #777;
+    font-size: 9px;
+    color: #b8b8b8;
 }
 
 /* Contenido del comentario */
 .comment-content {
-    font-size: 16px;
+    font-size: 17px;
 }
 
 /* Mensaje cuando no hay comentarios */
@@ -146,11 +228,70 @@
 
 /* Estilo del botón cancelar */
 .comments-cancel-btn {
-    background-color: #f44336; /* Rojo */
+    font-family: 'Roboto', sans-serif;
+    background-color:#caf438;
+    color: rgb(0, 0, 0);
+    padding: 8px 16px;
+    display: block;
+    border: none;
+    border-radius: 0.2px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    margin: 10px auto;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    background: #caf438;
+    border-radius: 0.3rem;
+    margin-bottom: 0.4rem;
+    clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%
+  ); /* Rojo */
+}
+.comments-cancel-btn:hover{
+    background-color: #001925;
+    color: rgb(255, 255, 255);
+    border: 1px solid #ff0000;
+}
+
+.comments-submit-btn:hover{
+    background-color: #001925;
+    color: rgb(255, 255, 255);
+    border: 1px solid #caf438;
 }
 
 /* Estilo del botón publicar */
 .comments-submit-btn {
-    background-color: #4CAF50; /* Verde */
+    font-family: 'Roboto', sans-serif;
+    background-color:#caf438;
+    color: rgb(0, 0, 0);
+    padding: 8px 16px;
+    display: block;
+    border: none;
+    border-radius: 0.2px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    margin: 10px auto;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    background: #caf438;
+    border-radius: 0.3rem;
+    margin-bottom: 0.4rem;
+    clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 10px),
+    calc(100% - 10px) 100%,
+    0 100%
+    );
 }
 

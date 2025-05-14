@@ -23,7 +23,7 @@ export const Posts = ({ filter }) => {
 
   return (
     <div className="row g-0 justify-content-center m-5">
-      <div className="mb-3 d-flex align-items-center justify-content-center">
+      <div className="Title-2">
         <h2>Mis publicaciones</h2>
       </div>
 
