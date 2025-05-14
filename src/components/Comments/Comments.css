@@ -1,4 +1,4 @@
-/* Contenedor principal de los comentarios */
+/* Contenedor de los comentarios */
 .comments-container {
     max-width: 800px;
     margin: 0 auto;
@@ -6,16 +6,39 @@
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Importante para el posicionamiento absoluto */
 }
 
-/* Título de la sección de comentarios */
+/* Contenedor para el botón "Regresar" en la parte superior derecha */
+.regresar-btn-container {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+/* Estilo del botón regresar */
+.comments-go-back-btn {
+    background-color: #f44336; /* Rojo */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.comments-go-back-btn:hover {
+    background-color: #e53935; /* Rojo oscuro */
+}
+
+/* Título de los comentarios */
 .comments-title {
     font-size: 24px;
     margin-bottom: 20px;
     text-align: center;
 }
 
-/* Estilo del área de inicio para comentar */
+/* Estilo del área para comenzar el comentario */
 .comments-start-area {
     padding: 10px;
     border: 1px solid #ddd;
@@ -28,19 +51,18 @@
 }
 
 .comments-start-area:hover {
-    background-color: #f0f0f0;
+    background-color: #e8e8e8;
 }
 
-/* Formulario de comentarios */
+/* Estilo del formulario de comentario */
 .comments-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-/* Estilos de los inputs y textarea */
-.comments-input,
-.comments-textarea {
+/* Estilo de los campos del formulario */
+.comments-input, .comments-textarea {
     padding: 10px;
     font-size: 16px;
     border-radius: 5px;
@@ -110,11 +132,12 @@
     color: #777;
 }
 
-/* Botones de cancelar y publicar */
+/* Alineación de los botones "Comentar" y "Cancelar" */
 .buttons-container {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
+    margin-top: 10px;
 }
 
 .buttons-container button {
