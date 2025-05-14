@@ -1,5 +1,5 @@
 import React from 'react'
-import './NotFoundPage.css'  // Asegúrate de importar el archivo CSS
+import './NotFoundPage.css' 
 
 export const NotFoundPage = () => {
   return (
