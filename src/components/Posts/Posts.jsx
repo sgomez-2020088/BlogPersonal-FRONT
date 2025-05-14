@@ -33,10 +33,10 @@ export const Posts = ({ filter }) => {
         ))
       ) : (
         <div className='no-posts'>
-            <p>No hay publicaciones disponibles</p>
+            <p>Aún no hay publicaciones 😢</p>
         </div>
         
       )}
     </div>
-  );
-};
+  )
+}

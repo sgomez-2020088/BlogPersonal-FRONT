@@ -31,9 +31,9 @@ export const PostPage = () => {
 
   return (
     <div>
-      <Navbar setFilter={setFilter} /> {/* Pasar setFilter al Navbar */}
+      <Navbar setFilter={setFilter} />
       <PostProvider>
-        <Posts filter={filter} /> {/* Pasar el filtro a los Posts */}
+        <Posts filter={filter} /> 
       </PostProvider>
     </div>
   )

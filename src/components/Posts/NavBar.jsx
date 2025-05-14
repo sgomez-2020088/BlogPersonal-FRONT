@@ -20,8 +20,7 @@ const [filter, setInternalFilter] = useState("Todos")
     }
 
     return (
-    <div className="navbar">
-      {/* Botones de filtro */}
+    <div className="navbar1">
         <button
             onClick={() => handleFilterChange('Todos')}
             className={`filter-button ${filter === 'Todos' ? 'active' : ''}`}

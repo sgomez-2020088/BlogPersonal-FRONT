@@ -1,94 +1,64 @@
-/* Navbar */
+
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    
-  }
-  
-  .navbar-logo {
-    flex: 1;
-  }
-  
-  .navbar-logo .logo {
-    width: 120px; /* Ajusta el tamaño del logo */
-  }
-  
-  .navbar-buttons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .navbar-button {
-    padding: 10px 20px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    background-color: #f1f1f1;
-    color: #333;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 25px;
-  }
-  
-  .navbar-button.active {
-    background-color: #016DD9;
-    color: white;
-    
-  }
-  
-  .navbar-button:hover {
-    background-color: #ddd;
-  }
-  
-  /* Publicaciones */
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .m-5 {
-    margin: 20px;
-  }
-  
-  .no-posts-message {
-    font-size: 2rem; 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+.navbar1 {
+  padding: 0.3rem;
+  margin: 0.3rem;
+
+}
+
+.navbar button {
+  padding: 10px 20px;
+  background-color: #016DD9;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px; /* Espacio entre los botones */
+}
+
+.navbar button:hover {
+  background-color: #005bb5;
+}
+
+/* Cambios específicos para los botones activos */
+.filter-button.active {
+  background-color: #016DD9;
+  color: white;
+  border-radius: 25px;
+}
+
+.filter-button {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px; /* Espacio entre los botones */
+}
+
+.filter-button:hover {
+  background-color: #ddd;
+}
+
+.filter-button.active {
+  background-color: #016DD9;
+  color: white;
+}
+
+.no-posts{
+  font-size: 2rem; 
     text-align: center; 
-    color:#fc3434; 
+    color:#636060; 
     margin-top: 20px; 
     font-weight: bold;
 }
-
-.navbar {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    margin: 0 20px;
-  }
-  
-  .navbar button {
-    padding: 10px 20px;
-    background-color: #016DD9;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .navbar button:hover {
-    background-color: #005bb5;
-  }
-  
-  .no-posts {
-    font-size: 2rem; /* Aumenta el tamaño del texto */
-    text-align: center; /* Centra el texto */
-    color: #777; /* Puedes cambiar el color si lo deseas */
-    margin-top: 20px; /* Espacio superior para que no se quede pegado al borde */
-    font-weight: bold; /* Ponerlo en negritas si quieres */
-  }
