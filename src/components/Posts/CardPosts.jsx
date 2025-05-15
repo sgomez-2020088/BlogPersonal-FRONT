@@ -27,14 +27,17 @@ export const CardPosts = ({ post }) => {
   return (
     <div className="card2" style={{ width: '18rem' }}>
       <h5 className="cardTitle">{title}</h5>
-      <p className="cardDescription">{description}</p>
+      
       <p className="cardCourse">{course}</p>
       <p className="cardDate">{displayDate}</p>
 
 
       {isExpanded && (
         <div className="cardDetails">
-          <p><strong>Link:</strong> <a href={link} target="_blank" rel="noopener noreferrer">{link}</a></p>
+          <p >{description}</p>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            Link del código
+          </a>
         </div>
       )}
 

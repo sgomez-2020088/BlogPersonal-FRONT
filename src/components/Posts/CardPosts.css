@@ -130,7 +130,7 @@
 .cardTitle {
   font-size: 1.25rem;
   font-weight: bold;
-  color:#ffffff;
+  color:#caf438;
   text-align: left; 
   padding-left: 1rem;
   font-weight: bold;
@@ -153,6 +153,14 @@
   padding-left: 1rem;
   font-weight: bold;
 
+}
+.cardDescription{
+  font-size: 1rem;
+  color: #caf438;
+  margin: 10px 0;
+  text-align: left; 
+  padding-left: 1rem;
+  font-weight: bold;
 }
 
 .cardCourse:last-child {
@@ -182,13 +190,13 @@
   font-size: 1rem; /* Ajusta el tamaño de la fuente */
   cursor: pointer;
   border-radius: 5px;
-  background-color: #007bff;
+  background-color: #caf438;
   color: white;
   border: none;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #caf438;
 }
 
 /* Formulario para agregar comentarios */
@@ -203,7 +211,7 @@ textarea {
 button {
   padding: 10px 15px;
   margin-top: 10px;
-  background-color: #007bff;
+  background-color: #caf438;
   color: white;
   border: none;
   border-radius: 5px;
