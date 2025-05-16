@@ -31,18 +31,21 @@ export const Comments = () => {
         setNewComment({ ...newComment, [name]: value }) 
         setErrors({ ...errors, [name]: '' })
     }
-
-    const validateForm = () => {
-        const newErrors = {}
-        if (!newComment.username) {
-            newErrors.username = 'Name is required'
-        }
-        if (!newComment.content) {
-            newErrors.content = 'Comment content is required'
-        }
-        setErrors(newErrors)
-        return Object.keys(newErrors).length === 0 
-    }
+        const validateForm = () => {
+            const newErrors = {}
+          
+            if (!newComment.username.trim()) {
+              newErrors.username = 'Por favor, ingresa un nombre de usuario'
+            } else if (newComment.username.length > 50) {
+              newErrors.username = 'El nombre de usuario no puede superar los 50 caracteres'
+            }
+          
+            if (!newComment.content.trim()) newErrors.content = 'El contenido del comentario es obligatorio'
+            
+          
+            setErrors(newErrors)
+            return Object.keys(newErrors).length === 0
+          }
 
     const handleCommentSubmit = async (e) => {
         e.preventDefault()
@@ -59,7 +62,7 @@ export const Comments = () => {
             }
 
             setNewComment({ username: '', content: '' }) 
-            toast.success('Comentario agregado con éxito')
+            toast.success('Comentario agregado :D')
         } else {
             toast.error('Error al agregar el comentario')
         }
@@ -102,6 +105,7 @@ export const Comments = () => {
                         placeholder="Nombre de usuario"
                         value={newComment.username}
                         onChange={handleInputChange}
+                        maxLength={50}
                     />
                     {errors.username && <p className="error-message">{errors.username}</p>}
                     <textarea
@@ -114,7 +118,7 @@ export const Comments = () => {
                     {errors.content && <p className="error-message">{errors.content}</p>}
                     <div className="buttons-container">
                         <button type="button" onClick={handleCancelCommenting} className="comments-cancel-btn">Cancelar</button>
-                        <button type="submit" className="comments-submit-btn" disabled={!newComment.username || !newComment.content}>Publicar</button>
+                        <button type="submit" className="comments-submit-btn" >Publicar</button>
                     </div>
                 </form>
             )}

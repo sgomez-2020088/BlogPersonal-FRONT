@@ -5,18 +5,21 @@ import { CardPosts } from './CardPosts'
 import { SyncLoader } from 'react-spinners'
 import './Navbar.css'
 
-export const Posts = ({ filter }) => {
+export const Posts = ({ filter, searchQuery }) => {
   const { posts, isFetchingPosts } = useContextPosts()
+  
 
 
   const filteredPosts = Array.isArray(posts) && posts.length > 0
-    ? (filter === 'Todos' ? posts : posts.filter(post => post.course === filter))
-    : []
+  ? posts
+      .filter(post => filter === 'Todos' || post.course === filter)
+      .filter(post => post.title.toLowerCase().includes(searchQuery.toLowerCase()))
+  : []
 
   if (isFetchingPosts) {
     return (
       <div className="loading">
-        <SyncLoader loading margin={0} size={20} />
+        <SyncLoader loading margin={2} size={20} />
       </div>
     );
   }

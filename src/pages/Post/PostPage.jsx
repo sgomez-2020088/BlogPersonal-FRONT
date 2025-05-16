@@ -5,13 +5,14 @@ import { PostProvider } from "../../contexts/PostsContext"
 import { Navbar } from "../../components/Posts/NavBar"
 
 export const PostPage = () => {
-  const [filter, setFilter] = useState("Todos") // Estado del filtro, manejado desde el Navbar
+  const [filter, setFilter] = useState("Todos")
+  const [searchQuery, setSearchQuery] = useState("")
 
   return (
     <div>
-      <Navbar setFilter={setFilter} />
+      <Navbar setFilter={setFilter} setSearchQuery={setSearchQuery}/>
       <PostProvider>
-        <Posts filter={filter} /> 
+        <Posts filter={filter} searchQuery={searchQuery} /> 
       </PostProvider>
     </div>
   )
