@@ -3,7 +3,7 @@
   background-color: rgb(255, 0, 0);
   border-radius: 8px;
   padding: 20px;
-  max-width: 600px; /* Aumentamos el tamaño máximo del modal */
+  max-width: 600px; 
   width: 100%;
   animation: fadeIn 0.3s ease;
 }
@@ -74,10 +74,10 @@
   }
 }
 
-/* Aseguramos que los contenedores de las publicaciones estén alineados y con margen entre ellos */
+
 .row {
-  display: grid; /* Usamos grid para distribuir las tarjetas */
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Hacemos las tarjetas más responsivas */
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
   gap: 20px;
   justify-items: center;
   padding: 20px;
@@ -185,9 +185,9 @@
 
 .btn-primary {
   display: block;
-  margin: 20px auto; /* Centra el botón */
-  padding: 8px 16px; /* Reduce el tamaño del botón */
-  font-size: 1rem; /* Ajusta el tamaño de la fuente */
+  margin: 20px auto; 
+  padding: 8px 16px; 
+  font-size: 1rem; 
   cursor: pointer;
   border-radius: 5px;
   background-color: #caf438;
@@ -199,7 +199,7 @@
   background-color: #caf438;
 }
 
-/* Formulario para agregar comentarios */
+
 textarea {
   width: 100%;
   padding: 10px;
@@ -222,23 +222,19 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Línea gris debajo del contenido */
-
-
-
 .divider {
   border: 0;
-  border-top: 0.2rem solid #ffffff; /* Reduce el tamaño de la línea para que tenga menos espacio en los laterales */
-  margin: 10px 0; /* Asegura que la línea esté centrada y tenga margen automático a los lados */
+  border-top: 0.2rem solid #ffffff; 
+  margin: 10px 0; 
 }
 
 
-/* Estilo para el botón de "Comentarios" */
+
 .btn-comments {
   font-family: 'Roboto', sans-serif;
   display: block;
-  width: calc(100% - 40px); /* Ajustamos el ancho para dejar espacio */
-  padding: 8px 16px; /* Añadimos más espacio en el interior del botón */
+  width: calc(100% - 40px); 
+  padding: 8px 16px; 
   font-size: 1rem;
   cursor: pointer;
   border-radius: 0.2px;

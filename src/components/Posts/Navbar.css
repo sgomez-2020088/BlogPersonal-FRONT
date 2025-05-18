@@ -20,14 +20,13 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-right: 10px; /* Espacio entre los botones */
+  margin-right: 10px; 
 }
 
 .navbar button:hover {
   background-color: #001925;
 }
 
-/* Cambios específicos para los botones activos */
 .filter-button.active {
   background-color: #016DD9;
   color: white;
@@ -43,7 +42,7 @@
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-right: 10px; /* Espacio entre los botones */
+  margin-right: 10px; 
 }
 
 .filter-button:hover {
@@ -81,7 +80,7 @@
 .loading{
   display: flex;
   justify-content: center;
-  align-items: center;     /* Centra verticalmente */
+  align-items: center;     
   height: 80vh; 
 }
 

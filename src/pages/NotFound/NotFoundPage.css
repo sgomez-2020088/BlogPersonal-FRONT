@@ -1,17 +1,16 @@
-/* Estilos generales para la página Not Found */
 .not-found-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Asegura que la página ocupe toda la altura de la ventana */
-    background-color: #f8f8f8; /* Color de fondo suave */
+    height: 100vh; 
+    background-color: #f8f8f8; 
     font-family: 'Roboto', sans-serif
   }
   
   .not-found-container h1 {
     font-size: 5rem;
-    color: #ff3d3d; /* Color vibrante para el título */
+    color: #ff3d3d; 
     margin: 0;
   }
   
@@ -21,7 +20,7 @@
     margin: 20px 0;
     text-align: center;
   }
-  /* From Uiverse.io by Botwe-Felix5820 */
+  
 .not-found-button {
     height: 3em;
     width: 8em;

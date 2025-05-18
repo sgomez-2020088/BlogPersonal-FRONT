@@ -65,7 +65,12 @@ export const useComments = (postId) => {
   }
 
   const startCommenting = () => setIsCommenting(true)
-  const cancelCommenting = () => setIsCommenting(false)
+  const cancelCommenting = () => {
+  
+  setNewComment({ username: '', content: '' })
+  setIsCommenting(false) 
+}
+
 
   return {
     comments,
