@@ -1,4 +1,3 @@
-/* Contenedor de los comentarios */
 .comments-container {
     max-width: 800px;
     margin: 0 auto;
@@ -6,7 +5,7 @@
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative; /* Importante para el posicionamiento absoluto */
+    position: relative; 
     
 }
 .comments-container2{
@@ -16,7 +15,7 @@
 
     max-width: 50rem;
     width: 100%;
-    margin: 1rem auto; /* Centrado horizontal */
+    margin: 1rem auto; 
     padding: 20px;
     background-color: #212121;
     border-radius: 8px;
@@ -37,7 +36,6 @@
     justify-content: center;
 }
 
-/* Contenedor para el botón "Regresar" en la parte superior derecha */
 .regresar-btn-container {
     position: absolute;
     top: 10px;
@@ -45,7 +43,6 @@
     
 }
 
-/* Estilo del botón regresar */
 .comments-go-back-btn {
     font-family: 'Roboto', sans-serif;
     background-color:#caf438;
@@ -81,7 +78,6 @@
     border: 1px solid #ff7a01;
 }
 
-/* Título de los comentarios */
 .comments-title {
     font-size: 24px;
     margin-bottom: 30px;
@@ -98,7 +94,6 @@
     
 }
 
-/* Estilo del área para comenzar el comentario */
 .comments-start-area {
     padding: 10px;
     border: 1px solid #ddd;
@@ -114,14 +109,12 @@
     background-color: #e8e8e8;
 }
 
-/* Estilo del formulario de comentario */
 .comments-form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-/* Estilo de los campos del formulario */
 .comments-input, .comments-textarea {
     padding: 10px;
     font-size: 16px;
@@ -130,7 +123,6 @@
     width: 100%;
 }
 
-/* Estilo de los botones de publicar y cancelar */
 .comments-submit-btn,
 .comments-cancel-btn {
     background-color: #016DD9;
@@ -147,12 +139,10 @@
     background-color: #005bb5;
 }
 
-/* Contenedor de comentarios */
 .comments-list {
     margin-top: 30px;
 }
 
-/* Estilo de cada comentario */
 .comment-item {
     display: flex;
     flex-direction: column;
@@ -217,19 +207,16 @@
     color: #b8b8b8;
 }
 
-/* Contenido del comentario */
 .comment-content {
     font-size: 17px;
 }
 
-/* Mensaje cuando no hay comentarios */
 .no-comments-message {
     text-align: center;
     font-size: 18px;
     color: #777;
 }
 
-/* Alineación de los botones "Comentar" y "Cancelar" */
 .buttons-container {
     display: flex;
     justify-content: flex-end;
@@ -241,7 +228,6 @@
     width: 48%;
 }
 
-/* Estilo del botón cancelar */
 .comments-cancel-btn {
     font-family: 'Roboto', sans-serif;
     background-color:#caf438;
@@ -267,7 +253,7 @@
     100% calc(100% - 10px),
     calc(100% - 10px) 100%,
     0 100%
-  ); /* Rojo */
+  );
 }
 .comments-cancel-btn:hover{
     background-color: #001925;
